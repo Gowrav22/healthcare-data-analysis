@@ -16,7 +16,8 @@ IAM_ROLE 'arn:aws:iam::your-role-id:role/RedshiftAccess'
 CSV
 IGNOREHEADER 1;
 
-![Screenshot (19)](https://github.com/user-attachments/assets/793c2c8a-1e98-450c-aba8-f88fd9d11fff)
+![Screenshot (19)](https://github.com/user-attachments/assets/ef959bc2-41ee-4862-870f-0bfffc495c92)
+
 
 
 -- Step 3: Query to filter diabetic patient records
@@ -27,6 +28,7 @@ WHERE diagnosis = 'Diabetes';
 SELECT COUNT(*) AS diabetic_cases FROM healthcare_data
 WHERE diagnosis = 'Diabetes';
 
-![Screenshot (20)](https://github.com/user-attachments/assets/934ea1be-dc13-460b-b95e-cbe8e2d5922a)
+![Screenshot (20)](https://github.com/user-attachments/assets/1fc55507-9082-4329-bca8-4ed4db168631)
+
 
 
