@@ -9,12 +9,15 @@ CREATE TABLE healthcare_data (
     admission_date DATE
 );
 
--- Step 2: Load data from Amazon S3 using COPY command
+##Step 2: Load data from Amazon S3 using COPY command##
 COPY healthcare_data
 FROM 's3://your-bucket-name/healthcare_data.csv'
 IAM_ROLE 'arn:aws:iam::your-role-id:role/RedshiftAccess'
 CSV
 IGNOREHEADER 1;
+
+![Screenshot (19)](https://github.com/user-attachments/assets/793c2c8a-1e98-450c-aba8-f88fd9d11fff)
+
 
 -- Step 3: Query to filter diabetic patient records
 SELECT * FROM healthcare_data
@@ -22,4 +25,8 @@ WHERE diagnosis = 'Diabetes';
 
 -- Step 4: Count the number of diabetic cases
 SELECT COUNT(*) AS diabetic_cases FROM healthcare_data
-WHERE diagnosis = 'Diabetes'; ![Screenshot (17)](https://github.com/user-attachments/assets/8bb0c0f4-9c28-4d50-981d-33e543f97e9c)
+WHERE diagnosis = 'Diabetes';
+
+![Screenshot (20)](https://github.com/user-attachments/assets/934ea1be-dc13-460b-b95e-cbe8e2d5922a)
+
+
